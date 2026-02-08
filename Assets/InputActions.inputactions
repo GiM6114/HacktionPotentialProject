@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "Test",
+            "id": "17a47a7d-9a79-48c9-b7ab-7fdbe2ed697e",
+            "actions": [
+                {
+                    "name": "SendData",
+                    "type": "Button",
+                    "id": "bdc19e9a-616c-46ce-bb58-79a5478500d0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bed1da29-22ba-439d-bfcd-f0e28d13fb1d",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SendData",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
