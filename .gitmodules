@@ -1,0 +1,3 @@
+[submodule "MIRepNet"]
+	path = MIRepNet
+	url = https://github.com/staraink/MIRepNet.git
