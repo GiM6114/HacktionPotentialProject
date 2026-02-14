@@ -1,6 +1,6 @@
 # to get python prints in Unity console
 import sys
-sys.stdout.reconfigure(line_buffering=True)
+sys.stdout.flush()
 from pylsl import StreamInfo, StreamOutlet
 import time
 
@@ -24,7 +24,7 @@ def main():
        time.sleep(2)
        input_ = not input_
        outlet.push_sample([int(input_)])
-       print(f'Sent {input_} to Unity')
+       print(f'Sent {input_} to Unity', flush=True)
 
 if __name__ == "__main__":
     main()
