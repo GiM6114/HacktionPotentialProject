@@ -41,7 +41,7 @@ def parse_args():
     # Data loading
     parser.add_argument('--num_workers', type=int, default=4, 
                        help='Number of workers for data loading')
-    parser.add_argument('--val_split', type=float, default=0.7, 
+    parser.add_argument('--val_split', type=float, default=0.3, 
                        help='Validation set split ratio')
     
     # Experiment repetition

@@ -28,17 +28,22 @@ class EEGDataset(Dataset):
             self.sample_rate = 250
             
             # Define trial indices for each subject
-            subject_indices = {
-                0: np.arange(160) + 400,
-                1: np.arange(120) + 1120,
-                2: np.arange(160) + 1800,
-                3: np.arange(160) + 2540,
-                4: np.arange(160) + 3280,
-                5: np.arange(160) + 4000,
-                6: np.arange(160) + 4720,
-                7: np.arange(160) + 5480,
-                8: np.arange(160) + 6200
-            }
+            # subject_indices = {
+            #     0: np.arange(160) + 400,
+            #     1: np.arange(120) + 1120,
+            #     2: np.arange(160) + 1800,
+            #     3: np.arange(160) + 2540,
+            #     4: np.arange(160) + 3280,
+            #     5: np.arange(160) + 4000,
+            #     6: np.arange(160) + 4720,
+            #     7: np.arange(160) + 5480,
+            #     8: np.arange(160) + 6200
+            # }
+            n_trial_cum = 0
+            subject_indices = {}
+            for i,n_trial in enumerate([160,120,160,160,160,160,160,160,160]):
+                subject_indices[i] = np.arange(n_trial_cum, n_trial_cum + n_trial)
+                n_trial_cum += n_trial
             
             # Collect indices for selected subjects
             indices = []

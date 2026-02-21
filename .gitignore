@@ -13,6 +13,12 @@
 *.log
 
 /MIRepNet/data
+/MIRepNet/result
+
+*.bak
+__pycache__/
+*.pyc
+*.pyo
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

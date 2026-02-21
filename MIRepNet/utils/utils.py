@@ -173,6 +173,7 @@ def run_experiment(args, log_file):
     """Run complete experiment pipeline with configurable hyperparameters"""
     # Set up experiment tracking
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    os.makedirs("./result/acc", exist_ok=True)
     log_filename = f"./result/log/{args.dataset_name}_{args.model_name}_{now}_log.txt"
     csv_filename = f"./result/acc/{args.dataset_name}_{args.model_name}_{now}_results.csv"
     
@@ -304,8 +305,8 @@ def train_subject(args, subject, seed, device, log_file):
         # Log epoch results
         log_file.write(
             f"Seed: {seed}, Subject: {subject}, Epoch: {epoch+1}\n"
-            f"Train Loss: {train_loss:.4f}, Train Acc: {train_acc:.2%}, "
-            f"Val Loss: {val_loss:.4f}, Val Acc: {val_acc:.2%}, "
+            f"Train Loss: {train_loss:.4f}, Train Acc: {train_acc}, "
+            f"Val Loss: {val_loss:.4f}, Val Acc: {val_acc}, "
             f"LR: {curr_lr:.6f}\n"
         )
     
